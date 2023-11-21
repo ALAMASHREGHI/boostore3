@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-06 04:42-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\models.py:8 .\templates\books\book_detail.html:25
+#: .\templates\books\book_list.html:28
+msgid "author"
+msgstr "نویسنده:"
+
+#: .\models.py:9
+msgid "title"
+msgstr "عنوان"
+
+#: .\models.py:10
+msgid "text"
+msgstr "متن"
+
+#: .\models.py:11
+msgid "price"
+msgstr "قیمت"
+
+#: .\models.py:12
+msgid "cover"
+msgstr "جلد"
+
+#: .\templates\books\book_detail.html:48
+msgid "comment"
+msgstr "نظر:"
+
+#: .\templates\books\book_detail.html:67
+msgid "enter your comment"
+msgstr "نظر خود را وارد کنید:"
+
+#: .\templates\books\book_detail.html:71
+msgid "send"
+msgstr "ارسال"
+
+#: .\templates\books\book_list.html:7
+msgid "books list"
+msgstr "لیست کتاب ها"

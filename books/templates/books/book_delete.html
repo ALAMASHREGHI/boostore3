@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
+
+{% block page_title %}delete page{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <h2>are you sure you want to delete: {{ book.title }}</h2>
+        <button type="submit">yes, I`m sure</button>
+    </form>
+    <br>
+    <a href="{% url 'book_list' %}">book list</a>
+{% endblock %}

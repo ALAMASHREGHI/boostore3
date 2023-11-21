@@ -1,0 +1,64 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>{% block  page_title %}{% endblock %}</title>
+    {% block styles %}{% endblock %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-info" dir="rtl">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'icons/book.png' %}" alt="" height="30"
+                 class="d-inline-block align-text-top">
+        </a>
+        <a class="navbar-brand mx-3" href="#">{% trans 'bookyar' %}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">{% trans 'home' %}</a>
+                |
+                <a href="{% url 'aboutus' %}">{% trans 'aboutus' %}</a>
+                |
+                <a class="nav-link" href="{% url 'book_create' %}">{% trans 'add to book' %}</a>
+            </div>
+        </div>
+        <div class="mx-2 text-white">
+            {% if user.is_authenticated %}
+                welcome {{ user.username }} |
+                <a class="link-light text-decoration-none" href="{% url 'logout' %}">logout</a>
+            {% else %}
+                <a href="{% url 'login' %}">login</a> | <a href="{% url 'signup' %}">signup</a>
+            {% endif %}
+
+        </div>
+    </div>
+</nav>
+{% if messages %}
+    <dive class="container">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    </dive>
+{% endif %}
+
+{% block content %}
+
+{% endblock %}
+<!-- jQuery library -->
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+ Latest compiled JavaScript -->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

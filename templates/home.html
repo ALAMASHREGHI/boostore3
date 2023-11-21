@@ -1,0 +1,10 @@
+{% extends "_base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+	{% trans 'home page' %}
+    <br>
+    <br>
+    <a href="{% url 'book_list' %}">books list</a>
+{% endblock %}
